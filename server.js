@@ -58,20 +58,6 @@ const airlinesByRegionQuery = `
     AND airline.country = $REGION
 `
 
-// const airlinesUkQuery = `
-//     SELECT airline.*
-//     FROM \`trave-sample\` AS airline
-//     WHERE airline.type = 'airline'
-//     AND airline.country = 'United Kingdom'
-// `;
-//
-// const airlinesByRegionQuery = `
-//     SELECT airline.*
-//     FROM \`travel-sample\` AS airline
-//     WHERE airline.type = 'airline'
-//     AND airline.country = $REGION
-// `;
-
 const root = {
     airlinesUK: async () => {
         const result = await cluster.query(airlinesUkQuery);
